@@ -6,8 +6,8 @@ describe('Board', () => {
     const board = new Board([1, 2, 3, 4, 5, 6, 7, 8, 9]);
     expect(board.row1).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
   });
-  test('should sort the array by number', () => {
+  test('should return false if the object contains no duplicate numbers', () => {
     const board = new Board([9, 8, 7, 6, 5, 4, 3, 2, 1]);
-    expect(board.row1).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+    expect(board.areThereDuplicates(board.row1)).toEqual(false);
   });
 });
