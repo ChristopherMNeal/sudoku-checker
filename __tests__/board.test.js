@@ -10,4 +10,8 @@ describe('Board', () => {
     const board = new Board([9, 8, 7, 6, 5, 4, 3, 2, 1]);
     expect(board.areThereDuplicates(board.row1)).toEqual(false);
   });
+  test('should return true if the object does contain duplicate numbers', () => {
+    const board = new Board([9, 8, 7, 6, 5, 4, 3, 2, 2]);
+    expect(board.areThereDuplicates(board.row1)).toEqual(true);
+  });
 });
